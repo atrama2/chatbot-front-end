@@ -15,6 +15,7 @@ const showChatDialog = ref(false);
     >
       <vue-feather type="message-square"></vue-feather>
     </div>
+    <div>Hello</div>
     <ChatDialog
       :is-visible="showChatDialog"
       :id="'1'"

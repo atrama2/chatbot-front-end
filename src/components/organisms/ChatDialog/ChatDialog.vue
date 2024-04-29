@@ -76,7 +76,7 @@ const onSubmit = handleSubmit(async (values) => {
   try {
     const data: PostMessage = {
       message: values.message,
-      sender: getTokenFromStorage(),
+      sender: "atrama2" || getTokenFromStorage(),
     };
 
     const msg: Message = {
@@ -109,16 +109,16 @@ const onDialogShow = async () => {
       name: props.name,
     };
 
-    await setSlots(slots);
+    // await setSlots(slots);
 
-    const data: PostMessage = {
-      message: "/start-conversation",
-      sender: getTokenFromStorage(),
-    };
+    // const data: PostMessage = {
+    //   message: "/start-conversation",
+    //   sender: getTokenFromStorage(),
+    // };
 
-    const response: ResponseChatBot[] = await postMessage(data);
+    // const response: ResponseChatBot[] = await postMessage(data);
 
-    processResponseMessages(response);
+    // processResponseMessages(response);
     isLoading.value = false;
   } catch (error) {
     console.error;
